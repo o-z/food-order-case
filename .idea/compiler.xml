@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="domain (1) (com.craftbase.orderapi)" />
+        <module name="domain (2) (com.craftbase.restaurantapi)" />
+        <module name="infra (1) (com.craftbase.orderapi)" />
+        <module name="infra (2) (com.craftbase.restaurantapi)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="domain (1) (com.craftbase.orderapi)" options="-parameters" />
+      <module name="domain (2) (com.craftbase.restaurantapi)" options="-parameters" />
+      <module name="infra (1) (com.craftbase.orderapi)" options="-parameters" />
+      <module name="infra (2) (com.craftbase.restaurantapi)" options="-parameters" />
+    </option>
+  </component>
+</project>

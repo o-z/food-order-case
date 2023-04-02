@@ -1,0 +1,41 @@
+server:
+  port: '8080'
+management:
+  server:
+    port: '8081'
+spring:
+  application:
+    name: restaurant-api
+  cloud:
+    config:
+      enabled: false
+
+  redis:
+    host: craftgate-redis
+    port: 6379
+    connect-timeout: 60
+    database: 0
+    password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+  flyway:
+    schemas: CRAFT_GATE_RESTAURANT
+    user: root
+    password: root
+    url: ${FLYWAY_DATASOURCE_URL:jdbc:mysql://craftgate-restaurant-mysql:3308/mysql}
+    enabled: true
+    baseline-on-migrate: true
+  jpa:
+    defer-datasource-initialization: 'false'
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    password: CRAFT_GATE_RESTAURANT_USER
+    username: CRAFT_GATE_RESTAURANT_USER
+    url: ${DATASOURCE_URL:jdbc:mysql://craftgate-restaurant-mysql:3308/CRAFT_GATE_RESTAURANT?useSSL=false&allowPublicKeyRetrieval=true}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+

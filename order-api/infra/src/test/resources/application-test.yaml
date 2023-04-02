@@ -1,0 +1,20 @@
+server:
+  port: '8082'
+management:
+  server:
+    port: '8083'
+spring:
+  application:
+    name: order-api
+  flyway:
+    enabled: false
+microservice:
+  product-api: ${PRODUCT_API_BASE_URL:http://restaurant-api:8080}
+payment:
+  gateway:
+    type: ${PAYMENT_GATEWAY:CRAFTGATE}
+craft-gate:
+  api:
+    baseUrl: ${CRAFT_GATE_BASE_URL:https://sandbox-api.craftgate.io}
+    apiKey: ${CRAFT_GATE_API_KEY:sandbox-ocNNqeLVOsMquyqOVSKmYYgplaSZhhls}
+    secretKey: ${CRAFT_GATE_SECRET_KEY:sandbox-encbFWAefCdnbkmLtPkiNWHPKknjSoQp}
