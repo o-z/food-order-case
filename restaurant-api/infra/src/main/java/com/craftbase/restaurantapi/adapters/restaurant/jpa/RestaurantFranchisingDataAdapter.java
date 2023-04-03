@@ -40,12 +40,14 @@ public class RestaurantFranchisingDataAdapter implements RestaurantFranchisingPo
         return restaurantFranchisingRepository.save(restaurantFranchisingEntity).getId();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public RestaurantFranchisingDto getRestaurantFranchisingById(UUID restaurantFranchisingId) {
         return restaurantFranchisingRepository.findById(restaurantFranchisingId)
                 .orElseThrow(() -> new RestaurantApiException(ErrorCode.RESTAURANT_FRANCHISING_NOT_FOUND_ERROR)).toModel();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public boolean isRestaurantFranchisingExistById(UUID restaurantFranchisingId) {
         return restaurantFranchisingRepository.existsById(restaurantFranchisingId);

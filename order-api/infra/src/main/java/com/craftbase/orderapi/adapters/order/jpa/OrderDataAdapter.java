@@ -121,6 +121,7 @@ public class OrderDataAdapter implements OrderPort {
         return orderRepository.save(orderEntity).toModel();
     }
 
+    @Transactional
     @Override
     public void updateOrderStatusAndIncreaseRetryCount(UUID orderId, OrderStatus orderStatus) {
         OrderEntity orderEntity = orderRepository.findById(orderId)

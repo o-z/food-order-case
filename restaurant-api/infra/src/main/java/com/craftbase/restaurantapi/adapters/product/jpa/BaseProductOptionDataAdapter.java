@@ -23,6 +23,7 @@ public class BaseProductOptionDataAdapter implements BaseProductOptionPort {
     private final BaseProductOptionRepository baseProductOptionRepository;
     private final BaseProductRepository baseProductRepository;
 
+    @Transactional
     @Override
     public UUID saveBaseProductOption(SaveBaseProductOption saveBaseProduct) {
         BaseProductEntity baseProductEntity = baseProductRepository
