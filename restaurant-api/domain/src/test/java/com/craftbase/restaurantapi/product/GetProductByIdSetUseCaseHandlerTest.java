@@ -1,9 +1,9 @@
-package com.craftbase.restaurantapi.product;
+package com.example.restaurantapi.product;
 
-import com.craftbase.restaurantapi.adapters.ProductFakeAdapter;
-import com.craftbase.restaurantapi.product.model.dto.ProductDto;
-import com.craftbase.restaurantapi.product.usecase.GetProductByIdSet;
-import com.craftbase.restaurantapi.product.usecase.SaveProduct;
+import com.example.restaurantapi.adapters.ProductFakeAdapter;
+import com.example.restaurantapi.product.model.dto.ProductDto;
+import com.example.restaurantapi.product.usecase.GetProductByIdSet;
+import com.example.restaurantapi.product.usecase.SaveProduct;
 import org.junit.Test;
 
 import java.util.*;

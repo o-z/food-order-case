@@ -1,13 +1,13 @@
-package com.craftbase.restaurantapi.product;
+package com.example.restaurantapi.product;
 
-import com.craftbase.restaurantapi.adapters.BaseProductFakeAdapter;
-import com.craftbase.restaurantapi.adapters.RestaurantFakeAdapter;
-import com.craftbase.restaurantapi.common.model.enums.PriceType;
-import com.craftbase.restaurantapi.product.model.dto.BaseProductDto;
-import com.craftbase.restaurantapi.product.model.enums.ProductStatus;
-import com.craftbase.restaurantapi.product.usecase.SaveBaseProduct;
-import com.craftbase.restaurantapi.restaurant.model.enums.RestaurantStatus;
-import com.craftbase.restaurantapi.restaurant.usecase.SaveRestaurant;
+import com.example.restaurantapi.adapters.BaseProductFakeAdapter;
+import com.example.restaurantapi.adapters.RestaurantFakeAdapter;
+import com.example.restaurantapi.common.model.enums.PriceType;
+import com.example.restaurantapi.product.model.dto.BaseProductDto;
+import com.example.restaurantapi.product.model.enums.ProductStatus;
+import com.example.restaurantapi.product.usecase.SaveBaseProduct;
+import com.example.restaurantapi.restaurant.model.enums.RestaurantStatus;
+import com.example.restaurantapi.restaurant.usecase.SaveRestaurant;
 import org.junit.Test;
 
 import java.math.BigDecimal;

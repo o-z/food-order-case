@@ -1,4 +1,4 @@
-## CraftGate Case project
+## FoodOrder Case project
 Project Goal:
 
 "Food Ordering System" that will be a fresh breeze in the industry. 
@@ -95,10 +95,10 @@ domain,infra. After building all modules, re-add modules to poms and build all p
   - Firstly you must be run mysql,kafka,zookeper and redis in docker
   - add your host file
     - 0.0.0.0 zookeeper
-    - 0.0.0.0 craftgate-kafka
-    - 0.0.0.0 craftgate-order-mysql
-    - 0.0.0.0 craftgate-restaurant-mysql
-    - 0.0.0.0 craftgate-redis
+    - 0.0.0.0 food-order-kafka
+    - 0.0.0.0 food-order-order-mysql
+    - 0.0.0.0 food-order-restaurant-mysql
+    - 0.0.0.0 food-order-redis
     - 0.0.0.0 restaurant-api
     - 0.0.0.0 order-api
   - Run mysql in docker-compose.yaml file and run java project
@@ -122,13 +122,13 @@ and u can find postman collections in base folder.
 
 Project has two databases :
 
-   1. CRAFT_GATE_RESTAURANT
-   2. CRAFT_GATE_ORDER
+   1. FOOD_ORDER_CASE_RESTAURANT
+   2. FOOD_ORDER_CASE_ORDER
    
 Database is Mysql in Docker with volume
 
 
 **Database Schema**
-![CRAFT_GATE_ORDER](./doc/CRAFT_GATE_ORDER_MYSQL.png) ![CRAFT_GATE_RESTAURANT](./doc/CRAFT_GATE_RESTAURANT_MYSQL.png)
+![FOOD_ORDER_CASE_ORDER](./doc/ORDER_MYSQL.png) ![FOOD_ORDER_CASE_RESTAURANT](./doc/RESTAURANT_MYSQL.png)
 
 

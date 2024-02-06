@@ -1,8 +1,8 @@
-package com.craftbase.restaurantapi.adapters;
+package com.example.restaurantapi.adapters;
 
-import com.craftbase.restaurantapi.product.model.dto.BaseProductOptionDto;
-import com.craftbase.restaurantapi.product.port.BaseProductOptionPort;
-import com.craftbase.restaurantapi.product.usecase.SaveBaseProductOption;
+import com.example.restaurantapi.product.model.dto.BaseProductOptionDto;
+import com.example.restaurantapi.product.port.BaseProductOptionPort;
+import com.example.restaurantapi.product.usecase.SaveBaseProductOption;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;

@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "b51649ee-03d8-4014-99b6-8d467cd2c81c",
+		"name": "FoodOrder Case Restaurant Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8878741"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "restaurants",
+					"item": [
+						{
+							"name": "{restaurantId}",
+							"item": [
+								{
+									"name": "franchisings",
+									"item": [
+										{
+											"name": "save Restaurant Franchising",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"address\": \"<string>\",\n  \"country\": \"<string>\",\n  \"desc\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"ACTIVE\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/restaurants/:restaurantId/franchisings",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"restaurants",
+														":restaurantId",
+														"franchisings"
+													],
+													"variable": [
+														{
+															"key": "restaurantId",
+															"value": "<uuid>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"address\": \"<string>\",\n  \"country\": \"<string>\",\n  \"desc\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"ACTIVE\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/restaurants/:restaurantId/franchisings",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"restaurants",
+																":restaurantId",
+																"franchisings"
+															],
+															"variable": [
+																{
+																	"key": "restaurantId"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "<uuid>"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Restaurant By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/restaurants/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"restaurants",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<uuid>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/restaurants/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"restaurants",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"status\": \"PASSIVE\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\",\n  \"restaurantFranchisings\": [\n    {\n      \"id\": \"<uuid>\",\n      \"name\": \"<string>\",\n      \"desc\": \"<string>\",\n      \"country\": \"<string>\",\n      \"address\": \"<string>\",\n      \"status\": \"ACTIVE\",\n      \"createDate\": \"<dateTime>\",\n      \"updateDate\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<uuid>\",\n      \"name\": \"<string>\",\n      \"desc\": \"<string>\",\n      \"country\": \"<string>\",\n      \"address\": \"<string>\",\n      \"status\": \"ACTIVE\",\n      \"createDate\": \"<dateTime>\",\n      \"updateDate\": \"<dateTime>\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "save Restaurant",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"PASSIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/restaurants",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"restaurants"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"PASSIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/restaurants",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"restaurants"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<uuid>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "{productId}",
+							"item": [
+								{
+									"name": "options",
+									"item": [
+										{
+											"name": "save Product Option",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"baseProductOptionId\": \"<uuid>\",\n  \"desc\": \"<string>\",\n  \"name\": \"<string>\",\n  \"restaurantFranchisingId\": \"<uuid>\",\n  \"price\": \"<number>\",\n  \"priceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/products/:productId/options",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"products",
+														":productId",
+														"options"
+													],
+													"variable": [
+														{
+															"key": "productId",
+															"value": "<uuid>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"baseProductOptionId\": \"<uuid>\",\n  \"desc\": \"<string>\",\n  \"name\": \"<string>\",\n  \"restaurantFranchisingId\": \"<uuid>\",\n  \"price\": \"<number>\",\n  \"priceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/products/:productId/options",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"products",
+																":productId",
+																"options"
+															],
+															"variable": [
+																{
+																	"key": "productId"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "<uuid>"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Product By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v1/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<uuid>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/v1/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<uuid>\",\n  \"name\": \"<string>\",\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"categoryId\": \"<uuid>\",\n  \"restaurantFranchisingId\": \"<uuid>\",\n  \"price\": \"<number>\",\n  \"priceType\": \"TRY\",\n  \"status\": \"PASSIVE\",\n  \"createDate\": \"<dateTime>\",\n  \"updateDate\": \"<dateTime>\",\n  \"productOptionMap\": {\n    \"in_0\": {\n      \"id\": \"<uuid>\",\n      \"name\": \"<string>\",\n      \"desc\": \"<string>\",\n      \"price\": \"<number>\",\n      \"priceType\": \"TRY\",\n      \"restaurantFranchisingId\": \"<uuid>\",\n      \"status\": \"PASSIVE\",\n      \"createDate\": \"<dateTime>\",\n      \"updateDate\": \"<dateTime>\"\n    }\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Product By Id Set",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v1/products?uuids=<uuid>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "uuids",
+											"value": "<uuid>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/v1/products?uuids=<uuid>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"products"
+											],
+											"query": [
+												{
+													"key": "uuids",
+													"value": "<uuid>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"veniam17a\": {\n    \"id\": \"<uuid>\",\n    \"name\": \"<string>\",\n    \"desc\": \"<string>\",\n    \"imageUrl\": \"<string>\",\n    \"categoryId\": \"<uuid>\",\n    \"restaurantFranchisingId\": \"<uuid>\",\n    \"price\": \"<number>\",\n    \"priceType\": \"TRY\",\n    \"status\": \"PASSIVE\",\n    \"createDate\": \"<dateTime>\",\n    \"updateDate\": \"<dateTime>\",\n    \"productOptionMap\": {\n      \"nostrud3\": {\n        \"id\": \"<uuid>\",\n        \"name\": \"<string>\",\n        \"desc\": \"<string>\",\n        \"price\": \"<number>\",\n        \"priceType\": \"TRY\",\n        \"restaurantFranchisingId\": \"<uuid>\",\n        \"status\": \"PASSIVE\",\n        \"createDate\": \"<dateTime>\",\n        \"updateDate\": \"<dateTime>\"\n      },\n      \"in_67\": {\n        \"id\": \"<uuid>\",\n        \"name\": \"<string>\",\n        \"desc\": \"<string>\",\n        \"price\": \"<number>\",\n        \"priceType\": \"TRY\",\n        \"restaurantFranchisingId\": \"<uuid>\",\n        \"status\": \"ACTIVE\",\n        \"createDate\": \"<dateTime>\",\n        \"updateDate\": \"<dateTime>\"\n      },\n      \"est_1\": {\n        \"id\": \"<uuid>\",\n        \"name\": \"<string>\",\n        \"desc\": \"<string>\",\n        \"price\": \"<number>\",\n        \"priceType\": \"TRY\",\n        \"restaurantFranchisingId\": \"<uuid>\",\n        \"status\": \"ACTIVE\",\n        \"createDate\": \"<dateTime>\",\n        \"updateDate\": \"<dateTime>\"\n      },\n      \"laboris_301\": {\n        \"id\": \"<uuid>\",\n        \"name\": \"<string>\",\n        \"desc\": \"<string>\",\n        \"price\": \"<number>\",\n        \"priceType\": \"TRY\",\n        \"restaurantFranchisingId\": \"<uuid>\",\n        \"status\": \"ACTIVE\",\n        \"createDate\": \"<dateTime>\",\n        \"updateDate\": \"<dateTime>\"\n      }\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "save Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"baseProductId\": \"<uuid>\",\n  \"categoryId\": \"<uuid>\",\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"name\": \"<string>\",\n  \"restaurantFranchisingId\": \"<uuid>\",\n  \"price\": \"<number>\",\n  \"priceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"baseProductId\": \"<uuid>\",\n  \"categoryId\": \"<uuid>\",\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"name\": \"<string>\",\n  \"restaurantFranchisingId\": \"<uuid>\",\n  \"price\": \"<number>\",\n  \"priceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/products",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"products"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<uuid>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "base-products",
+					"item": [
+						{
+							"name": "{baseProductId}",
+							"item": [
+								{
+									"name": "base-options",
+									"item": [
+										{
+											"name": "save Base Product Option",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"desc\": \"<string>\",\n  \"name\": \"<string>\",\n  \"defaultPrice\": \"<number>\",\n  \"defaultPriceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v1/base-products/:baseProductId/base-options",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v1",
+														"base-products",
+														":baseProductId",
+														"base-options"
+													],
+													"variable": [
+														{
+															"key": "baseProductId",
+															"value": "<uuid>"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"desc\": \"<string>\",\n  \"name\": \"<string>\",\n  \"defaultPrice\": \"<number>\",\n  \"defaultPriceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/v1/base-products/:baseProductId/base-options",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"v1",
+																"base-products",
+																":baseProductId",
+																"base-options"
+															],
+															"variable": [
+																{
+																	"key": "baseProductId"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "<uuid>"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "save Base Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"categoryId\": \"<uuid>\",\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"name\": \"<string>\",\n  \"restaurantId\": \"<uuid>\",\n  \"defaultPrice\": \"<number>\",\n  \"defaultPriceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/base-products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"base-products"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"categoryId\": \"<uuid>\",\n  \"desc\": \"<string>\",\n  \"imageUrl\": \"<string>\",\n  \"name\": \"<string>\",\n  \"restaurantId\": \"<uuid>\",\n  \"defaultPrice\": \"<number>\",\n  \"defaultPriceType\": \"TRY\",\n  \"status\": \"PASSIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v1/base-products",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v1",
+												"base-products"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<uuid>"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:8080"
+		}
+	]
+}

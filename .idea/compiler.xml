@@ -7,19 +7,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="domain (1) (com.craftbase.orderapi)" />
-        <module name="domain (2) (com.craftbase.restaurantapi)" />
-        <module name="infra (1) (com.craftbase.orderapi)" />
-        <module name="infra (2) (com.craftbase.restaurantapi)" />
+        <module name="infra" />
+        <module name="domain (1) (com.example.restaurantapi)" />
+        <module name="infra (1) (com.foodorder.restaurantapi)" />
+        <module name="domain" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="domain (1) (com.craftbase.orderapi)" target="17" />
+      <module name="domain (1) (com.foodorder.restaurantapi)" target="17" />
+      <module name="domain (2) (com.craftbase.restaurantapi)" target="17" />
+      <module name="infra (1) (com.craftbase.orderapi)" target="17" />
+      <module name="infra (2) (com.craftbase.restaurantapi)" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="domain (1) (com.craftbase.orderapi)" options="-parameters" />
-      <module name="domain (2) (com.craftbase.restaurantapi)" options="-parameters" />
-      <module name="infra (1) (com.craftbase.orderapi)" options="-parameters" />
-      <module name="infra (2) (com.craftbase.restaurantapi)" options="-parameters" />
+      <module name="domain" options="-parameters" />
+      <module name="domain (1) (com.craftbase.orderapi)" options="" />
+      <module name="domain (1) (com.example.restaurantapi)" options="-parameters" />
+      <module name="domain (1) (com.foodorder.restaurantapi)" options="-parameters" />
+      <module name="domain (2) (com.craftbase.restaurantapi)" options="" />
+      <module name="infra" options="-parameters" />
+      <module name="infra (1) (com.craftbase.orderapi)" options="" />
+      <module name="infra (1) (com.foodorder.restaurantapi)" options="-parameters" />
+      <module name="infra (2) (com.craftbase.restaurantapi)" options="" />
     </option>
   </component>
 </project>

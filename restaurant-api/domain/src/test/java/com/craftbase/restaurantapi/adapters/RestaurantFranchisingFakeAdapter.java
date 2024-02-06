@@ -1,8 +1,8 @@
-package com.craftbase.restaurantapi.adapters;
+package com.example.restaurantapi.adapters;
 
-import com.craftbase.restaurantapi.restaurant.model.dto.RestaurantFranchisingDto;
-import com.craftbase.restaurantapi.restaurant.port.RestaurantFranchisingPort;
-import com.craftbase.restaurantapi.restaurant.usecase.SaveRestaurantFranchising;
+import com.example.restaurantapi.restaurant.model.dto.RestaurantFranchisingDto;
+import com.example.restaurantapi.restaurant.port.RestaurantFranchisingPort;
+import com.example.restaurantapi.restaurant.usecase.SaveRestaurantFranchising;
 
 import java.util.HashMap;
 import java.util.Map;

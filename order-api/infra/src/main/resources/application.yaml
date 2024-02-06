@@ -13,20 +13,20 @@ spring:
     consumer:
       group-id: order-api
       auto-offset-reset: latest
-    bootstrap-servers: craftgate-kafka:29092
+    bootstrap-servers: food-order-kafka:29092
     topic:
       orderRollback: order-rollback
   redis:
-    host: craftgate-redis
+    host: food-order-redis
     port: 6379
     connect-timeout: 60
     database: 0
     password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
   flyway:
-    schemas: CRAFT_GATE_ORDER
+    schemas: FOOD_ORDER_CASE_ORDER
     user: root
     password: root
-    url: ${FLYWAY_DATASOURCE_URL:jdbc:mysql://craftgate-order-mysql:3307/mysql}
+    url: ${FLYWAY_DATASOURCE_URL:jdbc:mysql://food-order-order-mysql:3307/mysql}
     enabled: true
     baseline-on-migrate: true
   jpa:
@@ -38,9 +38,9 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:
-    password: CRAFT_GATE_ORDER_USER
-    username: CRAFT_GATE_ORDER_USER
-    url: ${DATASOURCE_URL:jdbc:mysql://craftgate-order-mysql:3307/CRAFT_GATE_ORDER?useSSL=false&allowPublicKeyRetrieval=true}
+    password: FOOD_ORDER_CASE_ORDER_USER
+    username: FOOD_ORDER_CASE_ORDER_USER
+    url: ${DATASOURCE_URL:jdbc:mysql://food-order-order-mysql:3307/FOOD_ORDER_CASE_ORDER?useSSL=false&allowPublicKeyRetrieval=true}
 
 springdoc:
   swagger-ui:

@@ -1,9 +1,9 @@
-package com.craftbase.restaurantapi.adapters;
+package com.example.restaurantapi.adapters;
 
-import com.craftbase.restaurantapi.restaurant.model.dto.RestaurantDto;
-import com.craftbase.restaurantapi.restaurant.model.enums.RestaurantStatus;
-import com.craftbase.restaurantapi.restaurant.port.RestaurantPort;
-import com.craftbase.restaurantapi.restaurant.usecase.SaveRestaurant;
+import com.example.restaurantapi.restaurant.model.dto.RestaurantDto;
+import com.example.restaurantapi.restaurant.model.enums.RestaurantStatus;
+import com.example.restaurantapi.restaurant.port.RestaurantPort;
+import com.example.restaurantapi.restaurant.usecase.SaveRestaurant;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;

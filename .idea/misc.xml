@@ -5,8 +5,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/order-api/pom.xml" />
+        <option value="$PROJECT_DIR$/restaurant-api/infra/pom.xml" />
+        <option value="$PROJECT_DIR$/restaurant-api/pom.xml" />
+        <option value="$PROJECT_DIR$/order-api/domain/pom.xml" />
+        <option value="$PROJECT_DIR$/order-api/infra/pom.xml" />
       </list>
     </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK" />
 </project>
